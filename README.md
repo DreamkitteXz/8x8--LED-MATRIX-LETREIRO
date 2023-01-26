@@ -52,14 +52,14 @@ Voce ira aprender:
 <p> Logo abaixo tem o código de um letreiro que mostra um o texto que você quiser, mas antes de executarmos esse código temos que instalar a biblioteca <code>Max72xxPanel.h</code> para o código funcionar. Para fazer isso é muito facil, basta você clicar <a href="https://embarcados.com.br/wokwi-simulador-de-esp32/#O-que-e-o-Wokwi
 ">nesse link</a> para baixar a pasta compactada da biblioteca, uma vez feito isso vamos para o Arduino IDE e procurar por <code>Sketch</code> > <code>Incluir bibliioteca</code> > <code>Adicionar .ZIP</code> .
 </p>
-<p align='center'><img src="c.png" alt="Screen" width="641" height="357"></p>
+<p align='center'><img src="images\c.png" alt="Screen" width="641" height="357"></p>
 <p> Procure pela pasta baixada e clique em <code>abrir</code></p>
-<p align='center'><img src="pl.png" alt="Screen" width="800" height="650"></p>
+<p align='center'><img src="images\pl.png" alt="Screen" width="800" height="650"></p>
 <p> Agora iremos instalar outra biblioteca <code> Adafruit GFX Library</code>, dessa vez iremos utilizar outra forma de instalar, basta clicar em <code>Ferramentas</code> > <code>Gerenciar bibliotecas</code>.
 </p>
-<p align='center'><img src="K.png" alt="Screen" width="584" height="408"></p>
+<p align='center'><img src="images\K.png" alt="Screen" width="584" height="408"></p>
 <p> Procure por <code> Adafruit GFX Library</code> e instale.</p>
-<p align='center'><img src="sa.png" alt="Screen" width="799" height="464"></p>
+<p align='center'><img src="images\sa.png" alt="Screen" width="799" height="464"></p>
 <p> Pronto agora uma vez que as conexões estão feitas execute o código abaixo:</p>
 
 <p align='center'><pre><code >
@@ -117,7 +117,7 @@ void loop()
   }
 }</code></pre></p>
 <p>Espere o seguinte resultado:</p>
-<p align='center'><img src="ETEFMC.gif" alt="Screen" width="600" height="338">
+<p align='center'><img src="images\ETEFMC.gif" alt="Screen" width="600" height="338">
 
 <h3 align='center'>
   Explicando o código
@@ -137,16 +137,16 @@ void loop()
 <b>setCol(addr, coluna, valor)</b>
 
 <h4 align='center'>byte arrays</h4>
-<img src="Untitled.png" alt="Screen" width="964" height="150">
+<img src="images\Untitled.png" alt="Screen" width="964" height="150">
 <p> Essas Arrays de Bytes são o que informa os pontos gráficos(Led's) que serão acionados no Display </p>
-<p align='center'><img src="jhg.png" alt="Screen" width="222" height="166"></p>
+<p align='center'><img src="images\jhg.png" alt="Screen" width="222" height="166"></p>
 <p><code>lc.shutdown(0,false);</code> Liga o Display.</p>
 <p><code>lc.setIntensity(0,8);</code> Configura o brilho do Display, sendo o máximo 15 e o mínimo 0.</p>
 <p><code>lc.clearDisplay(0);</code> Limpa o display após liga-lo.</p>
-<p align='center'><img src="sfes.png" alt="Screen" width="232" height="267"></p>
+<p align='center'><img src="images\sfes.png" alt="Screen" width="232" height="267"></p>
 <p><code>void drawFaces(){</code> é uma função void onde mostra a cara triste, neutra e feliz.</p>
 <p><code>lc.setRow(0,0,sf[0]);</code> A função setRow(addr,row,value) recebe 3 argumentos. O primeiro é o endereço do dispositivo. O segundo é a linha que precisa ser atualizada e o terceiro é o valor a ser definido para esta linha.</p>
 <p><code>delay(delaytime);</code> Tempo de delay, nesse caso 1 segundo entre as faces, foi atribuido á uma variável global mas poderia ser o valor numérico em milissegundos normal.</p>
-<p align='center'><img src="Loop.png" alt="Screen" width="155" height="105"></p>
+<p align='center'><img src="images\Loop.png" alt="Screen" width="155" height="105"></p>
 <p><code>void loop(){</code> Executa o código em loop.</p>
 <p><code>drawFaces();</code> Executa o código que está na função que acabamos de criar <code>void drawFaces(){</code>.</p>
