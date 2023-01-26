@@ -55,7 +55,7 @@ Voce ira aprender:
 <p align='center'><img src="c.png" alt="Screen" width="641" height="357"></p>
 <p> Procure pela pasta baixada e clique em <code>abrir</code></p>
 <p align='center'><img src="pl.png" alt="Screen" width="800" height="650"></p>
-<p> Agora iremos instalar outra biblioteca <code> Adafruit GFX Library</code>, dessa vez iremos utilizar outra forma de instalar, basta
+<p> Agora iremos instalar outra biblioteca <code> Adafruit GFX Library</code>, dessa vez iremos utilizar outra forma de instalar, basta clicar em <code>Ferramentas</code> > <code>Gerenciar bibliotecas</code>.
 </p>
 <p align='center'><img src="K.png" alt="Screen" width="584" height="408"></p>
 <p> Procure por <code> Adafruit GFX Library</code> e instale.</p>
@@ -63,27 +63,27 @@ Voce ira aprender:
 <p> Pronto agora uma vez que as conexões estão feitas execute o código abaixo:</p>
 
 <p align='center'><pre><code >
-#include <SPI.h>
-#include <Adafruit_GFX.h>
-#include <Max72xxPanel.h>
+#include "SPI.h"
+#include "Adafruit_GFX.h"
+#include "Max72xxPanel.h"
  
-int pinCS = 10; // Attach CS to this pin, DIN(11)to MOSI and CLK(13) to SCK 
+int pinCS = 10; // Conecte CS a este pino, DIN(11) a MOSI e CLK(13) a SCK
 int numberOfHorizontalDisplays = 1;
 int numberOfVerticalDisplays = 3;
  
 Max72xxPanel matrix = Max72xxPanel(pinCS, numberOfHorizontalDisplays, numberOfVerticalDisplays);
  
 String txtDisplay = "ETEFMC";
-int width = 5 + 1; // The font width is 5 pixels
+int width = 5 + 1; // A largura da fonte é de 5 pixels
  
 void setup() 
 {
  
-  matrix.setIntensity(15); // Use a value between 0 and 15 for brightness
-  matrix.setPosition(0, 0, 0); // The first display is at <0, 0>
-  matrix.setPosition(1, 0, 1); // The second display is at <1, 0>
-  matrix.setPosition(2, 0, 2); // The third display is at <2, 0>
-  matrix.setRotation(1);    // The same hold for the last display
+  matrix.setIntensity(15); // Use um valor entre 0 e 15 para brilho
+  matrix.setPosition(0, 0, 0); // A primeira exibição está em <0, 0>
+  matrix.setPosition(1, 0, 1); // A segunda tela está em <1, 0>
+  matrix.setPosition(2, 0, 2); // A terceira tela está em <2, 0>
+  matrix.setRotation(1);    // A mesma espera para a última exibição
  matrix.fillScreen(LOW);
  matrix.write();
  delay(400);
@@ -100,7 +100,7 @@ void loop()
  
     int letter = i / width;
     int x = (matrix.width() - 1) - i % width;
-    int y = (matrix.height() - 8) / 2; // center the text vertically
+    int y = (matrix.height() - 8) / 2; // centraliza o texto verticalmente
  
     while ( x + width - 1 >= 0 && letter >= 0 ) 
     {
@@ -112,7 +112,7 @@ void loop()
       x -= width;
     }
  
-    matrix.write(); // Send bitmap to display
+    matrix.write(); // Envia bitmap para exibição
     delay(100);
   }
 }</code></pre></p>
