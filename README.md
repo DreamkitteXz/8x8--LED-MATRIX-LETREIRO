@@ -60,75 +60,61 @@ Voce ira aprender:
 <p align='center'><img src="k.png" alt="Screen" width="584" height="408"></p>
 <p> Procure por <code> Adafruit GFX Library</code> e instale.</p>
 <p align='center'><img src="sa.png" alt="Screen" width="799" height="464"></p>
-<h3 align='center'>Código</h3>
-<p > Agora execute o código:</p>
+<p> Pronto agora uma vez que as conexões estão feitas execute o código abaixo:</p>
+
 <p align='center'><pre><code >
-
-#include "LedControl.h"
-#include "binary.h"
-
-/*
- DIN conectado no pino 12
- CLK conectado no pino 11
- CS conectado no pino 10 
-*/
-LedControl lc=LedControl(12,11,10,1);
-
-// Tempo de delay entre as caras
-unsigned long delaytime=1000;
-
-// cara feliz
-byte hf[8]= {B00111100,B01000010,B10100101,B10000001,B10100101,B10011001,B01000010,B00111100};
-// cara neutra
-byte nf[8]={B00111100, B01000010,B10100101,B10000001,B10111101,B10000001,B01000010,B00111100};
-// cara triste
-byte sf[8]= {B00111100,B01000010,B10100101,B10000001,B10011001,B10100101,B01000010,B00111100};
-
-void setup() {
-  lc.shutdown(0,false);
-  // Brilho médio
-  lc.setIntensity(0,8);
-  // Limpa o display
-  lc.clearDisplay(0);  
+#include <SPI.h>
+#include <Adafruit_GFX.h>
+#include <Max72xxPanel.h>
+ 
+int pinCS = 10; // Attach CS to this pin, DIN(11)to MOSI and CLK(13) to SCK 
+int numberOfHorizontalDisplays = 1;
+int numberOfVerticalDisplays = 3;
+ 
+Max72xxPanel matrix = Max72xxPanel(pinCS, numberOfHorizontalDisplays, numberOfVerticalDisplays);
+ 
+String txtDisplay = "ETEFMC";
+int width = 5 + 1; // The font width is 5 pixels
+ 
+void setup() 
+{
+ 
+  matrix.setIntensity(15); // Use a value between 0 and 15 for brightness
+  matrix.setPosition(0, 0, 0); // The first display is at <0, 0>
+  matrix.setPosition(1, 0, 1); // The second display is at <1, 0>
+  matrix.setPosition(2, 0, 2); // The third display is at <2, 0>
+  matrix.setRotation(1);    // The same hold for the last display
+ matrix.fillScreen(LOW);
+ matrix.write();
+ delay(400);
+ matrix.print("ETE");
+ matrix.write();
+ delay(2000);
 }
-
-void drawFaces(){
-  // Mostra a cara trite
-  lc.setRow(0,0,sf[0]);
-  lc.setRow(0,1,sf[1]);
-  lc.setRow(0,2,sf[2]);
-  lc.setRow(0,3,sf[3]);
-  lc.setRow(0,4,sf[4]);
-  lc.setRow(0,5,sf[5]);
-  lc.setRow(0,6,sf[6]);
-  lc.setRow(0,7,sf[7]);
-  delay(delaytime);
-  
-  // Mostra a cara neutra
-  lc.setRow(0,0,nf[0]);
-  lc.setRow(0,1,nf[1]);
-  lc.setRow(0,2,nf[2]);
-  lc.setRow(0,3,nf[3]);
-  lc.setRow(0,4,nf[4]);
-  lc.setRow(0,5,nf[5]);
-  lc.setRow(0,6,nf[6]);
-  lc.setRow(0,7,nf[7]);
-  delay(delaytime);
-  
-  // Mostra a cara feliz
-  lc.setRow(0,0,hf[0]);
-  lc.setRow(0,1,hf[1]);
-  lc.setRow(0,2,hf[2]);
-  lc.setRow(0,3,hf[3]);
-  lc.setRow(0,4,hf[4]);
-  lc.setRow(0,5,hf[5]);
-  lc.setRow(0,6,hf[6]);
-  lc.setRow(0,7,hf[7]);
-  delay(delaytime);
-}
-
-void loop(){
-  drawFaces();
+ 
+void loop() 
+{
+  for ( int i = 0 ; i < width * txtDisplay.length() + matrix.width() - 1 - 1; i++ ) 
+  {
+    matrix.fillScreen(LOW);
+ 
+    int letter = i / width;
+    int x = (matrix.width() - 1) - i % width;
+    int y = (matrix.height() - 8) / 2; // center the text vertically
+ 
+    while ( x + width - 1 >= 0 && letter >= 0 ) 
+    {
+      if ( letter < txtDisplay.length() ) 
+      {
+        matrix.drawChar(x, y, txtDisplay[letter], HIGH, LOW, 1);
+      }
+      letter--;
+      x -= width;
+    }
+ 
+    matrix.write(); // Send bitmap to display
+    delay(100);
+  }
 }</code></pre></p>
 <p>Espere o seguinte resultado:</p>
 <p align='center'><img src="ezgif.com-gif-maker (5).gif" alt="Screen" width="600" height="337">
