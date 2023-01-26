@@ -1,5 +1,5 @@
 <h2 align='center'>
-  Testando a plataforma Wokwi 
+  Letreiro com uma matrix de 8x24a
 </h2>
 <h3>
   Visão geral 
@@ -49,8 +49,7 @@ Voce ira aprender:
     </tr>
 </table>
 <h3 align='center'>Letreiro</h3>
-<p> Logo abaixo tem o código de um letreiro que mostra um o texto que você quiser, mas antes de executarmos esse código temos que instalar a biblioteca <code>Max72xxPanel.h</code> para o código funcionar. Para fazer isso é muito facil, basta você clicar <a href="https://embarcados.com.br/wokwi-simulador-de-esp32/#O-que-e-o-Wokwi
-">nesse link</a> para baixar a pasta compactada da biblioteca, uma vez feito isso vamos para o Arduino IDE e procurar por <code>Sketch</code> > <code>Incluir bibliioteca</code> > <code>Adicionar .ZIP</code> .
+<p> Logo abaixo tem o código de um letreiro que mostra um o texto que você quiser, mas antes de executarmos esse código temos que instalar a biblioteca <code>Max72xxPanel.h</code> para o código funcionar. Para fazer isso é muito facil, basta você clicar <a href="https://github.com/markruys/arduino-Max72xxPanel/archive/master.zip">nesse link</a> para baixar a pasta compactada da biblioteca, uma vez feito isso vamos para o Arduino IDE e procurar por <code>Sketch</code> > <code>Incluir bibliioteca</code> > <code>Adicionar .ZIP</code> .
 </p>
 <p align='center'><img src="images\c.png" alt="Screen" width="641" height="357"></p>
 <p> Procure pela pasta baixada e clique em <code>abrir</code></p>
