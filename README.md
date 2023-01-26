@@ -1,5 +1,5 @@
 <h2 align='center'>
-  Letreiro com uma matrix de 8x24a
+  Letreiro com uma matrix de 8x24
 </h2>
 <h3>
   Visão geral 
