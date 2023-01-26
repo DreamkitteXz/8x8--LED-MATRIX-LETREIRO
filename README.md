@@ -122,31 +122,3 @@ void loop()
 <h3 align='center'>
   Explicando o código
 </h3>
-<h4 align='center'>Usando as funções da biblioteca LedControl</h4>
-<p>A maneira mais fácil de exibir algo na matriz de pontos é usando as funções <code>setLed()</code> , <code>setRow()</code> ou <code>setColumn()</code> . Estas funções permitem controlar um único led, uma linha ou uma coluna de cada vez.</p>
-<p>Aqui estão os parâmetros para cada função:</p>
-<b>setLed(addr, linha, coluna, estado)</b>
-<ul>
-    <li><code>addr</code> é o endereço da sua matriz, por exemplo, se você tiver apenas 1 matriz, o int addr será zero.</li>  
-    <li><code>linha</code> é a linha onde o led está localizado.</li>  
-<li><code>col</code> é a coluna onde o led está localizado</li>  
-<li><code>Estado</code> <ul><li>É verdadeiro ou 1 se quiser acender o led</li><li>É falso ou 0 se você quiser desligá-lo</li></ul></li> 
-</ul>
-<b>setRow(addr, linha, valor)</b>
-<p></p>
-<b>setCol(addr, coluna, valor)</b>
-
-<h4 align='center'>byte arrays</h4>
-<img src="images\Untitled.png" alt="Screen" width="964" height="150">
-<p> Essas Arrays de Bytes são o que informa os pontos gráficos(Led's) que serão acionados no Display </p>
-<p align='center'><img src="images\jhg.png" alt="Screen" width="222" height="166"></p>
-<p><code>lc.shutdown(0,false);</code> Liga o Display.</p>
-<p><code>lc.setIntensity(0,8);</code> Configura o brilho do Display, sendo o máximo 15 e o mínimo 0.</p>
-<p><code>lc.clearDisplay(0);</code> Limpa o display após liga-lo.</p>
-<p align='center'><img src="images\sfes.png" alt="Screen" width="232" height="267"></p>
-<p><code>void drawFaces(){</code> é uma função void onde mostra a cara triste, neutra e feliz.</p>
-<p><code>lc.setRow(0,0,sf[0]);</code> A função setRow(addr,row,value) recebe 3 argumentos. O primeiro é o endereço do dispositivo. O segundo é a linha que precisa ser atualizada e o terceiro é o valor a ser definido para esta linha.</p>
-<p><code>delay(delaytime);</code> Tempo de delay, nesse caso 1 segundo entre as faces, foi atribuido á uma variável global mas poderia ser o valor numérico em milissegundos normal.</p>
-<p align='center'><img src="images\Loop.png" alt="Screen" width="155" height="105"></p>
-<p><code>void loop(){</code> Executa o código em loop.</p>
-<p><code>drawFaces();</code> Executa o código que está na função que acabamos de criar <code>void drawFaces(){</code>.</p>
