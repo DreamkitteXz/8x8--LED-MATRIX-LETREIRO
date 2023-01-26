@@ -48,11 +48,18 @@ Voce ira aprender:
         <td align='center'>pin 13</td>
     </tr>
 </table>
-<h3>Letreiro</h3>
+<h3 align='center'>Letreiro</h3>
 <p> Logo abaixo tem o código de um letreiro que mostra um o texto que você quiser, mas antes de executarmos esse código temos que instalar a biblioteca <code>Max72xxPanel.h</code> para o código funcionar. Para fazer isso é muito facil, basta você clicar <a href="https://embarcados.com.br/wokwi-simulador-de-esp32/#O-que-e-o-Wokwi
-">nesse link</a> para baixar a pasta compactada da biblioteca, uma vez feito isso vamos para o Arduino IDE e procurar por depois ir no Arduino IDE e Clicar em <code>Sketch</code> > <code>Incluir bibliioteca</code>  <code>Adicionar .ZIP</code> .
+">nesse link</a> para baixar a pasta compactada da biblioteca, uma vez feito isso vamos para o Arduino IDE e procurar por <code>Sketch</code> > <code>Incluir bibliioteca</code> > <code>Adicionar .ZIP</code> .
 </p>
 <p align='center'><img src="c.png" alt="Screen" width="641" height="357"></p>
+<p> Procure pela pasta baixada e clique em <code>abrir</code></p>
+<p align='center'><img src="pl.png" alt="Screen" width="800" height="650"></p>
+<p> Agora iremos instalar outra biblioteca <code> Adafruit GFX Library</code>, dessa vez iremos utilizar outra forma de instalar, basta
+</p>
+<p align='center'><img src="k.png" alt="Screen" width="584" height="408"></p>
+<p> Procure por <code> Adafruit GFX Library</code> e instale.</p>
+<p align='center'><img src="sa.png" alt="Screen" width="799" height="464"></p>
 <h3 align='center'>Código</h3>
 <p > Agora execute o código:</p>
 <p align='center'><pre><code >
