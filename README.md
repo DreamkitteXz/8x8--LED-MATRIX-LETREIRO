@@ -117,7 +117,7 @@ void loop()
   }
 }</code></pre></p>
 <p>Espere o seguinte resultado:</p>
-<p align='center'><img src="images\ETEFMC.gif" alt="Screen" width="600" height="338">
+<p align='center'><img src="Images\ETEFMC.gif" alt="Screen" width="600" height="338">
 
 <h3 align='center'>
   Explicando o código
