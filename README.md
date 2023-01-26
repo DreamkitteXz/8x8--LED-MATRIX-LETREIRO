@@ -118,18 +118,7 @@ void loop()
 }</code></pre></p>
 <p>Espere o seguinte resultado:</p>
 <p align='center'><img src="ETEFMC.gif" alt="Screen" width="600" height="338">
-<h3 align='center'>
-  Testando na prática
-</h3>
-<p>
-  <p>Agora vamos testar na prática o que fizemos no simulador, iremos precisar dos mesmos componentes, serão as mesmas conexões e utilizaremos o Arduino IDE.</p>
-<p>1. Monte seu circuito na prática fazendo as mesmas conexões</p>
-<p>2. Copie e cole o código para o Arduino IDE.</p>
-<p>3. Selecione a porta <code>COM</code></p>
-<p>4. Execute o código.</p>
-<p align='center'><img src="Arduinoide.gif" alt="Screen" width="600" height="337">
-<p> Espere o seguinte resultado:</p>
-<p align='center'><img src="Happy.gif" alt="Screen" width="600" height="1067"></p>
+
 <h3 align='center'>
   Explicando o código
 </h3>
