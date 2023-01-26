@@ -117,7 +117,7 @@ void loop()
   }
 }</code></pre></p>
 <p>Espere o seguinte resultado:</p>
-<p align='center'><img src="ezgif.com-gif-maker (5).gif" alt="Screen" width="600" height="337">
+<p align='center'><img src="ETEFMC.gif" alt="Screen" width="600" height="338">
 <h3 align='center'>
   Testando na prática
 </h3>
