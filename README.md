@@ -57,7 +57,7 @@ Voce ira aprender:
 <p align='center'><img src="pl.png" alt="Screen" width="800" height="650"></p>
 <p> Agora iremos instalar outra biblioteca <code> Adafruit GFX Library</code>, dessa vez iremos utilizar outra forma de instalar, basta
 </p>
-<p align='center'><img src="k.png" alt="Screen" width="584" height="408"></p>
+<p align='center'><img src="K.png" alt="Screen" width="584" height="408"></p>
 <p> Procure por <code> Adafruit GFX Library</code> e instale.</p>
 <p align='center'><img src="sa.png" alt="Screen" width="799" height="464"></p>
 <p> Pronto agora uma vez que as conexões estão feitas execute o código abaixo:</p>
