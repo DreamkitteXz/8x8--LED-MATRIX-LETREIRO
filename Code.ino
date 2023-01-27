@@ -9,7 +9,7 @@
 <p>Você irá brincar com a Matriz de LED Escrevendo alguma coisa e aparecendo no Letreiro.</p>
 </p>
 <p>
-Voce irá aprender:
+Voce ira aprender:
 <ul>
     <li>Instalar uma biblioteca no Arduino IDE.</li>  
 </ul>
